@@ -71,19 +71,11 @@
             android:inputType="text"
             android:text="Password" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#0D6EFD"
-            android:layout_marginStart="250dp"
-            android:layout_marginTop="460dp"
-            android:text="Forgot Password?"/>
-
         <Button
             android:id="@+id/button"
             android:layout_width="335dp"
             android:layout_height="56dp"
-            android:text="Sign In"
+            android:text="Register"
             android:textColor="#FFFFFF"
             android:layout_marginStart="40dp"
             android:layout_marginTop="500dp"
