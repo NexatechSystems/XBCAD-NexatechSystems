@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login_activity">
+    tools:context=".register_page">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,10 +17,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="140dp"
-            android:layout_marginTop="170dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="165dp"
             android:layout_weight="1"
-            android:text="Sign In Now"
+            android:text="Register"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="26sp" />
@@ -30,19 +31,30 @@
             android:id="@+id/signInInstruction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="90dp"
-            android:layout_marginTop="200dp"
-            android:text="Please sign in to continue our app"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="210dp"
+            android:text="Please fill the details and create account"
             android:textAlignment="center"
             android:textColor="#7D848D"
             android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="335dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/text_box"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Name" />
 
         <EditText
             android:id="@+id/editEmail"
             android:layout_width="335dp"
             android:layout_height="56dp"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="320dp"
             android:background="@drawable/text_box"
             android:ems="10"
             android:inputType="text"
@@ -53,7 +65,7 @@
             android:layout_width="335dp"
             android:layout_height="56dp"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="325dp"
+            android:layout_marginTop="390dp"
             android:background="@drawable/text_box"
             android:ems="10"
             android:inputType="text"
@@ -64,7 +76,7 @@
             android:layout_height="wrap_content"
             android:textColor="#0D6EFD"
             android:layout_marginStart="250dp"
-            android:layout_marginTop="390dp"
+            android:layout_marginTop="460dp"
             android:text="Forgot Password?"/>
 
         <Button
@@ -74,7 +86,7 @@
             android:text="Sign In"
             android:textColor="#FFFFFF"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="450dp"
+            android:layout_marginTop="500dp"
             android:background="@drawable/sign_in_button"/>
 
         <TextView
@@ -82,7 +94,7 @@
             android:layout_height="wrap_content"
             android:textColor="#707B81"
             android:layout_marginStart="120dp"
-            android:layout_marginTop="530dp"
+            android:layout_marginTop="580dp"
             android:text="Don't have an account?"
             />
         <TextView
@@ -90,7 +102,7 @@
             android:layout_height="wrap_content"
             android:textColor="#0D6EFD"
             android:layout_marginStart="270dp"
-            android:layout_marginTop="530dp"
+            android:layout_marginTop="580dp"
             android:text="Sign Up"
             />
         <TextView
@@ -98,11 +110,10 @@
             android:layout_height="wrap_content"
             android:textColor="#707B81"
             android:layout_marginStart="180dp"
-            android:layout_marginTop="550dp"
+            android:layout_marginTop="600dp"
             android:text="Or connect"
             />
 
     </RelativeLayout>
-
 
 </RelativeLayout>
