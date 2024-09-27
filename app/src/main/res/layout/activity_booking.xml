@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/hotelNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/txtColour"/>
+
+    <TextView
+        android:id="@+id/lblNights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Nights:"
+        app:layout_constraintTop_toBottomOf="@id/hotelNameTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/txtColour"/>
+
+    <!-- Number of Nights Input -->
+    <EditText
+        android:id="@+id/txtNights"
+        android:layout_width="150dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:hint="Enter number of nights"
+        android:inputType="number"
+        android:textColor="@color/txtColour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblNights"
+        app:layout_constraintTop_toBottomOf="@id/hotelNameTextView" />
+
+    <!-- Name Label -->
+    <TextView
+        android:id="@+id/lblName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        app:layout_constraintTop_toBottomOf="@id/txtNights"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/txtColour"/>
+
+    <!-- Name Input -->
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:hint="Enter your name"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/txtNights"
+        app:layout_constraintStart_toEndOf="@id/lblName"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/txtColour"/>
+
+    <!-- Phone Number Label -->
+    <TextView
+        android:id="@+id/lblPhoneNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number:"
+        app:layout_constraintTop_toBottomOf="@id/txtName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/txtColour"/>
+
+    <!-- Phone Number Input -->
+    <EditText
+        android:id="@+id/txtPhoneNo"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:hint="Enter your phone number"
+        android:inputType="phone"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        app:layout_constraintTop_toBottomOf="@id/txtName"
+        app:layout_constraintStart_toEndOf="@id/lblPhoneNo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/txtColour"/>
+
+    <!-- Payment Details Label -->
+    <TextView
+        android:id="@+id/lblPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Details:"
+        app:layout_constraintTop_toBottomOf="@id/txtPhoneNo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/txtColour"
+        />
+
+    <!-- Payment Details Input -->
+    <EditText
+        android:id="@+id/txtPayment"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:hint="Enter payment details"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/txtPhoneNo"
+        app:layout_constraintStart_toEndOf="@id/lblPayment"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/txtColour"/>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="335dp"
+        android:layout_height="56dp"
+        android:text="Submit Booking"
+        app:layout_constraintTop_toBottomOf="@id/txtPayment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/sign_in_button"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

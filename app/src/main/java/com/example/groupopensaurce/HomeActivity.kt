@@ -9,6 +9,7 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var restaurantAdapter: RestaurantAdapter
     private lateinit var poiAdapter: POIAdapter
+    private lateinit var hotelsAdapter: HotelsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,17 +23,17 @@ class HomeActivity : AppCompatActivity() {
 
         // Step 3: Provide a list of hotels (sample data)
         val hotels = listOf(
-            Hotel("Hotel A", R.drawable.h1),
+            Hotel("Grand Hotel", R.drawable.h1),
             Hotel("Gold Reef City Hotel", R.drawable.h2),
-            Hotel("Hotel C", R.drawable.h1),
+            Hotel("Sunrise Resort", R.drawable.h1),
             Hotel("Hotel D", R.drawable.h1),
             Hotel("Hotel E", R.drawable.h2),
             Hotel("Hotel F", R.drawable.h1)
         )
 
         // Step 4: Create and set the adapter for hotels
-        val hotelAdapter = HotelsAdapter(hotels, this)
-        recyclerViewHotels.adapter = hotelAdapter
+        hotelsAdapter = HotelsAdapter(hotels, this)
+        recyclerViewHotels.adapter = hotelsAdapter
 
         // Step 5: Find the RecyclerView for restaurants in the layout
         val recyclerViewRestaurants = findViewById<RecyclerView>(R.id.recyclerViewresturant)
