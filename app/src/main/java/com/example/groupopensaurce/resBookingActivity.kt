@@ -7,47 +7,44 @@ import android.widget.EditText
 import android.widget.Button
 import android.widget.Toast
 
-class BookingActivity : AppCompatActivity() {
+class ResBookingActivity : AppCompatActivity() {
 
-    private lateinit var hotelNameTextView: TextView
-    private lateinit var nightsEditText: EditText
+    private lateinit var restaurantNameTextView: TextView
+    private lateinit var numPeopleEditText: EditText
     private lateinit var nameEditText: EditText
     private lateinit var phoneEditText: EditText
-    private lateinit var paymentEditText: EditText
     private lateinit var submitButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_booking)
+        setContentView(R.layout.activity_res_booking)
 
         // Initialize UI components
-        hotelNameTextView = findViewById(R.id.hotelNameTextView)
-        nightsEditText = findViewById(R.id.txtNights)
-        nameEditText = findViewById(R.id.txtNights)
+        restaurantNameTextView = findViewById(R.id.resturantName)
+        numPeopleEditText = findViewById(R.id.txtNumPeople)
+        nameEditText = findViewById(R.id.txtName)
         phoneEditText = findViewById(R.id.txtPhoneNo)
-        paymentEditText = findViewById(R.id.txtPayment)
         submitButton = findViewById(R.id.btnSubmit)
 
-        // Get the hotel name from intent extras
-        val hotelName = intent.getStringExtra("HOTEL_NAME")
-        hotelNameTextView.text = hotelName
+        // Get the restaurant name from intent extras
+        val restaurantName = intent.getStringExtra("RESTAURANT_NAME")
+        restaurantNameTextView.text = restaurantName
 
         // Handle submit button click
         submitButton.setOnClickListener {
-            val numberOfNights = nightsEditText.text.toString()
+            val numberOfPeople = numPeopleEditText.text.toString()
             val userName = nameEditText.text.toString()
             val phoneNumber = phoneEditText.text.toString()
-            val paymentDetails = paymentEditText.text.toString()
 
             // Validate inputs
-            if (numberOfNights.isEmpty() || userName.isEmpty() || phoneNumber.isEmpty() || paymentDetails.isEmpty()) {
+            if (numberOfPeople.isEmpty() || userName.isEmpty() || phoneNumber.isEmpty()) {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             } else {
                 // Process booking
                 // TODO: Add your booking logic here (e.g., save to database, send to server)
 
                 // For now, display a confirmation message
-                Toast.makeText(this, "Booking successful!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Restaurant booking successful!", Toast.LENGTH_LONG).show()
 
                 // Optionally, navigate back to the home screen or clear the form
                 finish()

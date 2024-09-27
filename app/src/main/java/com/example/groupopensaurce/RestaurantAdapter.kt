@@ -1,15 +1,20 @@
 package com.example.groupopensaurce
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import android.content.Context
 
 data class Restaurant(val name: String, val imageResId: Int)
 
-class RestaurantAdapter(private val restaurants: List<Restaurant>) : RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>() {
+class RestaurantAdapter(
+    private val restaurants: List<Restaurant>,
+    private val context: Context // Pass context to launch activities
+) : RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>() {
 
     // ViewHolder class
     class RestaurantViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -26,6 +31,14 @@ class RestaurantAdapter(private val restaurants: List<Restaurant>) : RecyclerVie
         val restaurant = restaurants[position]
         holder.restaurantName.text = restaurant.name
         holder.restaurantImage.setImageResource(restaurant.imageResId)
+
+        // Set an item click listener
+        holder.itemView.setOnClickListener {
+            // Create an Intent to navigate to RestaurantBookingActivity
+            val intent = Intent(context, ResBookingActivity::class.java)
+            intent.putExtra("RESTAURANT_NAME", restaurant.name) // Pass restaurant name to the booking activity
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = restaurants.size

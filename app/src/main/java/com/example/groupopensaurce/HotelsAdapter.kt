@@ -31,7 +31,7 @@ class HotelsAdapter(private val hotelList: List<Hotel>, private val context: Con
 
         // Set onClickListener to navigate to BookingActivity when a hotel is clicked
         holder.itemView.setOnClickListener {
-            val intent = Intent(context, BookingActivity::class.java)
+            val intent = Intent(context, HotelBookingActivity::class.java)
             intent.putExtra("HOTEL_NAME", hotel.name)
             context.startActivity(intent)
         }

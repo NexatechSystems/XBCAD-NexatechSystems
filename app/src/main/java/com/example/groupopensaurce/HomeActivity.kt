@@ -15,6 +15,8 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+
+
         // Step 1: Find the RecyclerView for hotels in the layout
         val recyclerViewHotels: RecyclerView = findViewById(R.id.recyclerViewhotels)
 
@@ -45,7 +47,8 @@ class HomeActivity : AppCompatActivity() {
         val restaurants = getRestaurantList()
 
         // Step 8: Create and set the adapter for restaurants
-        restaurantAdapter = RestaurantAdapter(restaurants)
+        // Pass 'this' as the context to handle navigation on click
+        restaurantAdapter = RestaurantAdapter(restaurants, this)
         recyclerViewRestaurants.adapter = restaurantAdapter
 
         // Initialize RecyclerView for POIs (remains vertical by default)
